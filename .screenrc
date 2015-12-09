@@ -1,0 +1,27 @@
+#kill screen's startup message
+startup_message off
+
+# define a bigger scrollback, default is 100 lines
+defscrollback 1024
+
+# we want colors
+term screen-256color
+
+# An alternative hardstatus to display a bar at the bottom listing the
+# window names and highlighting the current window name in blue.
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bY}%-w%{.rW}%n %t%{-}%+w %=%{.rW} F9=New F10=Detach F12=Quit"
+
+# C-<left>
+bindkey '[1;5D' prev
+# C-<right>
+bindkey '[1;5C' next
+# F9
+bindkey -k k9 screen
+# F10
+bindkey -k k; detach
+# F12
+bindkey -k F2 quit
+
+screen -t Shell
