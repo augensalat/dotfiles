@@ -1,0 +1,5 @@
+%_topdir ~/packages
+%_signature gpg
+%_gpg_name 729367d9
+%packager Bernhard Graf <augensalat@gmail.com>
+%_gpg_path ~/.gnupg
