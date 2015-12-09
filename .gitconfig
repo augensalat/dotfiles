@@ -1,0 +1,33 @@
+[include]
+	# For username / creds / etc
+	path = ~/.gitconfig.local
+
+[user]
+	name = Bernhard Graf
+
+[color]
+	status = auto
+	branch = auto
+	ui = auto
+
+[core]
+	pager = less -FSRX
+	editor = vim
+
+[pull]
+	# pull with rebase instead of merge
+	rebase = true
+
+[push]
+	# http://mislav.uniqpath.com/2010/07/git-tips/
+	# git push will by default push all branches that have the same name
+	# on the remote. To limit this behavior to just the current branch,
+	# set this configuration option:
+	default = tracking
+
+[github]
+	user = augensalat
+
+[alias]
+	k = log --graph --decorate --pretty=oneline --abbrev-commit
+

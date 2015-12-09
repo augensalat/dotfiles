@@ -1,0 +1,22 @@
+# ignore everything in $HOME
+/*
+# ... except ...
+!/.bashrc
+!/.emacs
+!/.gitconfig
+!/.gitignore
+!/.gitmodules
+!/.git_template
+!/.gnu-emacs
+!/.gnu-emacs-custom
+!/.module-starter
+!/.profile
+!/.rpmmacros
+!/.screenrc
+!/.vim
+# ignore vim vundle bundles
+/.vim/bundle/*
+# except Vundle itself
+!/.vim/bundle/Vundle.vim
+!/.vimrc
+!/README.md
