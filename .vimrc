@@ -15,6 +15,41 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" get easier to use and more user friendly vim defaults
+" CAUTION: This option breaks some vi compatibility.
+"          Switch it off if you prefer real vi compatibility
+set nocompatible
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
 " automatically indent lines (default)
 " set noautoindent
 
@@ -36,12 +71,7 @@ set showmode
 " Required to be able to use keypad keys and map missed escape sequences
 set esckeys
 
-" get easier to use and more user friendly vim defaults
-" CAUTION: This option breaks some vi compatibility. 
-"          Switch it off if you prefer real vi compatibility
-set nocompatible
-
-" allow backspacing over everything in insert mode 
+" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 " keep 100 lines of command line history
@@ -251,11 +281,11 @@ endif
 map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
 
-" Only do this part when compiled with support for autocommands. 
+" Only do this part when compiled with support for autocommands.
 if has("autocmd")
-  " When editing a file, always jump to the last known cursor position. 
-  " Don't do it when the position is invalid or when inside an event handler 
-  " (happens when dropping a file on gvim). 
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
   autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
