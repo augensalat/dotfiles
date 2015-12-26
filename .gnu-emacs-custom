@@ -1,0 +1,23 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; File name: ` ~/.gnu-emacs-custom '
+;;; --------------------------------
+;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; disable beep
+(setq visible-bell t)
+
+;;; save Emacs session
+(desktop-save-mode 1)
+
+;;; Emacs server
+(server-start)
+
+;;; org mode
+(require 'org-install)
+;;; don't allow level to be DONE unless all children are DONE
+(setq org-enforce-todo-dependencies t)
+;;; 
+(setq org-blank-before-new-entry '((heading . t) (plain-list-item . nil)))
+;;; adding the date to the CLOSED tag
+(setq org-log-done 'time)
