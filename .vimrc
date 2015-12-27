@@ -31,7 +31,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Lean & mean status/tabline for vim that's light as air.
+Plugin 'vim-airline/vim-airline'
 
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'bubblegum'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,6 +93,9 @@ set incsearch
 
 " smart tabs for softtabs or expandtab
 set smarttab
+
+" display the status line always
+set laststatus=2
 
 " Complete longest common string, then each full match
 " enable this for bash compatible behaviour
