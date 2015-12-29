@@ -41,6 +41,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'bubblegum'
 
+" display tags in a window, ordered by scope
+Plugin 'majutsushi/tagbar'
+nnoremap <silent> <F6> :TagbarToggle<CR>
+
 " a Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 
