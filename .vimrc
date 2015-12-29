@@ -38,6 +38,10 @@ Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 nnoremap <silent> <F6> :TagbarToggle<CR>
 
+" UltiSnips - The ultimate snippet solution for Vim.
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " a Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 
