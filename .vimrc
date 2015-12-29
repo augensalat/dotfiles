@@ -34,6 +34,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'bling/vim-airline'
 
+" display tags in a window, ordered by scope
+Plugin 'majutsushi/tagbar'
+nnoremap <silent> <F6> :TagbarToggle<CR>
+
 " a Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 
