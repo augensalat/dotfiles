@@ -13,6 +13,7 @@
 !/.profile
 !/.rpmmacros
 !/.screenrc
+!/.sqliterc
 !/.vim
 # but ignore .vim/.netrwhist
 /.vim/.netrwhist
