@@ -13,6 +13,7 @@
 !/.profile
 !/.rpmmacros
 !/.screenrc
+!/.sqliterc
 !/.vim
 # ignore vim vundle bundles
 /.vim/bundle/*
