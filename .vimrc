@@ -41,6 +41,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'bubblegum'
 
+" interface to perldoc
+Plugin 'hotchpotch/perldoc-vim'
+
 " display tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
 nnoremap <silent> <F6> :TagbarToggle<CR>
