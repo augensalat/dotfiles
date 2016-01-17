@@ -2,6 +2,7 @@
 /*
 # ... except ...
 !/.bashrc
+!/.bash.d
 !/.emacs
 !/.gitconfig
 !/.gitignore
@@ -11,6 +12,7 @@
 !/.gnu-emacs-custom
 !/.module-starter
 !/.profile
+!/.profile.d
 !/.rpmmacros
 !/.screenrc
 !/.sqliterc
