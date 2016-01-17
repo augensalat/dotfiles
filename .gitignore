@@ -1,6 +1,7 @@
 # ignore everything in $HOME
 /*
 # ... except ...
+!/.bash-git-prompt
 !/.bashrc
 !/.bash.d
 !/.emacs

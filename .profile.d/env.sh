@@ -10,3 +10,4 @@
 #export LANG=fr_FR.UTF-8	# uncomment this line for French output
 #export LANG=es_ES.UTF-8	# uncomment this line for Spanish output
 
+export GIT_PROMPT_THEME=TruncatedPwd_WindowTitle
