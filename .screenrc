@@ -7,6 +7,10 @@ defscrollback 1024
 # we want colors
 term screen-256color
 
+# help finding the SSL auth socket
+# see .profile.d/agent.sh
+setenv SSH_AUTH_SOCK "$SSH_AUTH_SOCK_LINK"
+
 # An alternative hardstatus to display a bar at the bottom listing the
 # window names and highlighting the current window name in blue.
 hardstatus on

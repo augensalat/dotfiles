@@ -24,5 +24,6 @@
 # except Vundle itself
 !/.vim/bundle/Vundle.vim
 !/.vimrc
+!/bin/
 !/README.md
 .*.sw?

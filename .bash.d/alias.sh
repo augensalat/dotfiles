@@ -4,4 +4,4 @@
 # Set aliases
 #
 
-# alias l='ls -alF --color'
+alias find-ssh-agent='eval $(~/bin/find-ssh-agent.sh)'
