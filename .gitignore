@@ -2,8 +2,9 @@
 /*
 # ... except ...
 !/.bash-git-prompt
-!/.bashrc
 !/.bash.d
+!/.bashrc
+!/.bash_profile
 !/.emacs
 !/.gitconfig
 !/.gitignore
