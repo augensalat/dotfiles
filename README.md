@@ -34,6 +34,13 @@ git submodule update --init
 vim +PluginInstall +qall
 ```
 
+Optionally:
+
+```sh
+git clone https://github.com/riywo/anyenv ~/.anyenv
+exec $SHELL -l
+```
+
 # Adding your own (configuration) files to the repository
 
 The contained `.gitignore` disables all files in the home directory by
