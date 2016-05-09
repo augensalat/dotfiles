@@ -26,11 +26,11 @@ case "$OSTYPE" in
     fi
 
     case "$DIST" in
-    redhat*)
-      if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-      fi
-      ;;
+      redhat*)
+        if [ -f /etc/bashrc ]; then
+          . /etc/bashrc
+        fi
+        ;;
     esac
     ;;
   darwin*)
