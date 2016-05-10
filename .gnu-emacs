@@ -155,7 +155,7 @@
   ;;
   ;; Some fonts
   ;; -----------------------
-  (if (> emacs-major-version 20) (require 'xfonts))
+  ;; (if (> emacs-major-version 20) (require 'xfonts))
   ;;
   ;; New in Emacs 21: tool bar menu, you may switch it of
   ;; ----------------------------------------------------
@@ -163,7 +163,7 @@
   ;;
   ;; mouse as arrow
   ;; --------------
-  (setq x-pointer-shape x-pointer-left-ptr)
+  ;; (setq x-pointer-shape x-pointer-left-ptr)
   (if (x-display-color-p)
       (set-mouse-color "RoyalBlue")
     (set-mouse-color (cdr (assq 'mouse-color (frame-parameters)))))
