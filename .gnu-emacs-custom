@@ -13,6 +13,17 @@
 ;;; Emacs server
 (server-start)
 
+(when (eq system-type 'darwin) ;; mac specific settings
+  ;;; Disabling the right Alt-Key for Emacs to make it available for
+  ;;; special Mac keyboard sequences
+  (setq ns-right-alternate-modifier nil)
+  (define-key global-map [home] 'beginning-of-line)
+  (define-key global-map [end] 'end-of-line)
+  ;;; Reduce Emacs mouse scrolling speed
+  (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+  ;;; (setq mouse-wheel-progressive-speed nil)
+)
+
 ;;; org mode
 (require 'org-install)
 ;;; don't allow level to be DONE unless all children are DONE
