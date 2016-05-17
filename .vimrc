@@ -326,8 +326,8 @@ if has("autocmd")
   autocmd FileType text setlocal textwidth=78
 
   " special tabulator settings for perl and php files
-  autocmd FileType perl set tabstop=8 shiftwidth=4 softtabstop=4
-  autocmd FileType php set tabstop=8 shiftwidth=4 softtabstop=4
+  autocmd FileType perl set tabstop=8 shiftwidth=4 softtabstop=4 expandtab smarttab
+  autocmd FileType php set tabstop=8 shiftwidth=4 softtabstop=4 expandtab smarttab
 
 endif " has("autocmd")
 
