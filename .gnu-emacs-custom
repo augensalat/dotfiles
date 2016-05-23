@@ -29,7 +29,12 @@
 (require 'org-install)
 ;;; don't allow level to be DONE unless all children are DONE
 (setq org-enforce-todo-dependencies t)
-;;; 
+;;; http://orgmode.org/guide/Activation.html#Activation
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+;;;
 (setq org-blank-before-new-entry '((heading . t) (plain-list-item . nil)))
 ;;; adding the date to the CLOSED tag
 (setq org-log-done 'time)
