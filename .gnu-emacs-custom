@@ -4,8 +4,9 @@
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
-;;; disable beep
-(setq visible-bell t)
+;;; disable beep (and disable nonsense behaviour in MacOS El Capitan)
+(setq visible-bell nil) ;; The default
+(setq ring-bell-function 'ignore)
 
 ;;; save Emacs session
 (desktop-save-mode 1)
