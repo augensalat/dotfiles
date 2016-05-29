@@ -1,5 +1,34 @@
-%_topdir ~/packages
+# settings may be checked using
+#
+#   rpm --eval "%{macro}"
+
+%packager Bernhard Graf <augensalat@gmail.com>
+
 %_signature gpg
 %_gpg_name 729367d9
-%packager Bernhard Graf <augensalat@gmail.com>
 %_gpg_path ~/.gnupg
+
+# %_topdir defines the top directory to be used for RPM building purposes
+%_topdir	%{getenv:HOME}/rpmbuild
+
+# %_specdir is where the specfile gets placed.
+# %_sourcedir is the directory for source code tarballs, patches, etc.
+# In order to store all of them together in a Git repo I put them in the
+# same directory.
+%_sourcedir	%{_topdir}/SOURCE/%{name}
+%_specdir	%{_sourcedir}
+
+# %_builddir is where source code tarballs are decompressed, and patches then
+# applied when building an RPM package.
+%_builddir	%{_topdir}/BUILD
+
+# %_rpmdir is where binary RPM packages are put after being built.
+%_rpmdir	%{_topdir}/RPMS
+
+# %_srcrpmdir is where src.rpm packages are put after being built.
+%_srcrpmdir	%{_topdir}/SRPMS
+
+# The default is %{ARCH}/%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}.rpm.
+# I remove the %{ARCH} path element at the beginning to have all .rpm
+# files in one directory.
+%_rpmfilename	%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm
