@@ -16,7 +16,9 @@
 
 [pull]
 	# pull with rebase instead of merge
-	rebase = true
+	# preserve says in addition to enabling rebasing, to try to
+	# preserve merges if you have made any locally
+	rebase = preserve
 
 [push]
 	# http://mislav.uniqpath.com/2010/07/git-tips/
