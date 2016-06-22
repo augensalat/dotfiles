@@ -33,6 +33,7 @@
 [alias]
 	k = log --graph --decorate --pretty=oneline --abbrev-commit
 	ctags = !.git/hooks/ctags
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [init]
 	templatedir = ~/.git_template
