@@ -32,6 +32,7 @@
 
 [alias]
 	k = log --graph --decorate --pretty=oneline --abbrev-commit
+	v = log --graph --decorate --pretty=fuller --stat --abbrev-commit
 	ctags = !.git/hooks/ctags
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
