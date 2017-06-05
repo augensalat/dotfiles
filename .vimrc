@@ -328,6 +328,7 @@ if has("autocmd")
   " special tabulator settings for perl and php files
   autocmd FileType perl set tabstop=8 shiftwidth=4 softtabstop=4 expandtab smarttab
   autocmd FileType php set tabstop=8 shiftwidth=4 softtabstop=4 expandtab smarttab
+  autocmd FileType javascript set tabstop=8 shiftwidth=2 softtabstop=2 expandtab smarttab
 
 endif " has("autocmd")
 
