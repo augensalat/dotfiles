@@ -55,6 +55,10 @@ Plugin 'honza/vim-snippets'
 " a Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
 
+" https://editorconfig.org/
+Plugin 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
