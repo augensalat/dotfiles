@@ -24,12 +24,7 @@ git init
 git config -f .gitconfig.local user.email YOU@EXAMPLE.COM
 git remote add origin git@github.com:YOUR_USER_NAME/dotfiles.git
 git fetch
-git checkout -b backup
-git checkout origin/master -- .gitignore
-git add .
-git commit -m 'Backup my dotfiles'
-git checkout -f master
-git init  # yes, I mean it!
+git switch -f master
 git submodule update --init
 vim +PluginInstall +qall
 ```
@@ -43,37 +38,9 @@ exec $SHELL -l
 
 # Adding your own (configuration) files to the repository
 
-The contained `.gitignore` disables all files in the home directory by
-default and then explicitely excludes specific files from this rule.
-
-There are two options to add additional files to the repository:
-
-## Update .gitignore - i.e. add a line like
+The `.gitignore` ignores all files. You must force Git to track new files:
 
 ```sh
-!/.myconf
+git add -f NEW_FILE
 ```
 
-## Use the force...
-
-```sh
-git add -f .myconf
-```
-
-# Restore / Undo
-
-Restore a certain file from the backup:
-
-```sh
-git checkout backup -- .bashrc
-git commit -m 'Restore original .bashrc'
-```
-
-If you came to the conclusion everything was a big mistake and you want
-your old files back - don't worry - you made a backup, n'est ce pas?
-
-```sh
-cd
-git checkout backup
-rm -rf .git .gitignore
-```
